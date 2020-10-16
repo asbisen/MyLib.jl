@@ -9,7 +9,7 @@ function _img_to_array(filename; tfrm=nothing)
 end
 
 
-function _load_to_tensor(d::Vector; tfrm=nothing)
+function _load_to_tensor(d; tfrm=nothing)
     data=_img_to_array.(d.data, tfrm=tfrm)
     dtensor = cat(data..., dims=4)
     target = d.target
